@@ -1,10 +1,9 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="text-center h-screen flex justify-center items-center">
       <h1>
-        <code>iqbalferdiansyah-code.vercel</code> is under development!
+        <code className="text-blue-600">iqbalferdiansyah-code.vercel</code> <br /> is still under
+        development!
       </h1>
     </div>
   );
