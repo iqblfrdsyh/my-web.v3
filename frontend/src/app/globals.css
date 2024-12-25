@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #fefeff;
+    --foreground: #171717;
+  }
+}
+
+*,
+html {
+  /* outline: blue 1px solid; */
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-margin: 30px !important;
+}
+
+body {
+  color: var(--foreground);
+  background-image: url("../../public/images/background-gradient.svg");
+  background-size: cover;
+  background-position: initial;
+}
+
+.animateScrollTo {
+  animation: animateScrollTo 2s infinite;
+  -webkit-animation: animateScrollTo 2s infinite;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  padding-bottom: 60px !important;
+  /* display: flex !important;
+  align-items: center !important;
+  justify-content: center !important; */
+}
+
+/* .swiper-slide {
+  margin: 0 auto;
+} */
+
+.active {
+  background-color: #14a7ea !important;
+}
+
+.swiper-pagination {
+  width: 150px !important;
+}
+
+.swiper-pagination-bullet-active-main {
+  padding: 9px;
+}
+
+.swiper-pagination-bullet-active-prev,
+.swiper-pagination-bullet-active-next {
+  padding: 8px !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: #14a7ea !important;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes animateScrollTo {
+  0%,
+  100% {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-7px);
+    -webkit-transform: translateX(-7px);
+    -moz-transform: translateX(-7px);
+    -ms-transform: translateX(-7px);
+    -o-transform: translateX(-7px);
+  }
+}
+
+@media (min-width: 640px) {
+  *,
+  html {
+    scroll-padding: 80px auto;
+  }
+}
