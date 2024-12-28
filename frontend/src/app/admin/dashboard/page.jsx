@@ -1,22 +1,23 @@
 "use client";
 
-import Chart from "@/components/admin/chart/chart";
-import StatCard from "@/components/admin/stat-card/stat-card";
+import AdminLayout from "@/components/layouts/adminLayout/admin.layout";
+import Chart from "@/components/ui/admin/chart/chart";
+import StatCard from "@/components/ui/admin/stat-card/stat-card";
 import React from "react";
-import { FaBriefcase, FaTrophy, FaEnvelope, FaChartLine } from "react-icons/fa";
+import { FaBriefcase, FaCode, FaChartLine } from "react-icons/fa";
+import { PiCertificateFill } from "react-icons/pi";
 
 const Dashboard = () => {
   const statsData = [
     { title: "Total Projects", value: "12", icon: FaBriefcase },
-    { title: "Total Skills", value: "25", icon: FaTrophy },
-    { title: "Messages", value: "8", icon: FaEnvelope },
-    { title: "Active Now", value: "573", icon: FaChartLine },
+    { title: "Total Skills", value: "12", icon: FaCode },
+    { title: "Total Certificates", value: "20", icon: PiCertificateFill },
+    { title: "Total View", value: "8", icon: FaChartLine },
   ];
 
   return (
-    <div className="mt-10 sm:mx-10">
-      <h1 className="absolute top-2 left-14 text-[23px] font-semibold">Dashboard</h1>
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 py-5">
+    <AdminLayout title={"Dashboard"}>
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 py-7">
         {statsData.map((stat) => (
           <StatCard key={stat.title} {...stat} />
         ))}
@@ -27,7 +28,7 @@ const Dashboard = () => {
           <Chart />
         </div>
       </div>
-    </div>
+    </AdminLayout>
   );
 };
 

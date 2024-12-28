@@ -25,7 +25,7 @@ export function Providers({ children }) {
             }}
           >
             {!isAdminPath && <NavigationBar />}
-            <main className="px-5 sm:px-16">{children}</main>
+            <main className="px-3 sm:px-16">{children}</main>
             {!isAdminPath && <Footer />}
           </div>
         </div>
@@ -35,5 +35,5 @@ export function Providers({ children }) {
 }
 
 const Background = () => (
-  <div className="bg-gradient-bg absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat -z-10 opacity-40"></div>
+  <div className="bg-gradient absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat -z-10 opacity-[0.37]"></div>
 );

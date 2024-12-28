@@ -14,7 +14,7 @@ module.exports = {
         foreground: "var(--foreground)",
       },
       backgroundImage: {
-        "gradient-bg": "url('/images/background-gradient.svg')",
+        "gradient": "url('/images/background-gradient.svg')",
       },
     },
   },
