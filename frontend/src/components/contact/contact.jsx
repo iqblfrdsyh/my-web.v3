@@ -1,13 +1,98 @@
-import React, { useState, useEffect } from "react";
+"use client";
+
+import React, { useState, useEffect, useCallback } from "react";
 import TitleWithSub from "../ui/title";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import FormInput from "../ui/input/input";
 import { Buttons } from "../ui/buttons";
 import { RealTimeClock } from "@/libs/datetime";
-import { FaXTwitter } from "react-icons/fa6";
+import Swal from "sweetalert2";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
   const [datetime, setDatetime] = useState(RealTimeClock.getCurrentDateTime());
+  const [sending, setSending] = useState(false);
+  const [emailError, setEmailError] = useState("");
+
+  const publicKey = process.env.NEXT_PUBLIC_USER_ID;
+  const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID;
+  const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID;
+
+  const validateEmail = (email) =>
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+  const handleEmailValidation = (e) => {
+    const { value } = e.target;
+
+    setEmailError(
+      !validateEmail(value) ? "Please enter a valid email" : ""
+    );
+  };
+
+  const sendEmail = useCallback(
+    async (e) => {
+      e.preventDefault();
+      const { fullname, email, message } = e.target;
+
+      try {
+        setSending(true);
+        disableFormFields([fullname, email, message]);
+
+        const templateParams = {
+          from_name: email.value,
+          user_name: fullname.value,
+          user_email: email.value,
+          to_name: "iqblfrdsyh@gmail.com",
+          message: message.value,
+        };
+
+        await emailjs.send(serviceId, templateId, templateParams, publicKey);
+        showSuccessAlert();
+      } catch (error) {
+        console.log(error);
+
+        showErrorAlert();
+      } finally {
+        setSending(false);
+        enableFormFields([fullname, email, message]);
+        e.target.reset();
+      }
+    },
+    [publicKey, serviceId, templateId]
+  );
+
+  const disableFormFields = (fields) =>
+    fields.forEach((field) => {
+      if (field) field.disabled = true;
+    });
+
+  const enableFormFields = (fields) =>
+    fields.forEach((field) => {
+      if (field) field.disabled = false;
+    });
+
+  const showSuccessAlert = () =>
+    showAlert(
+      "Success!",
+      "Your message has been sent successfully.",
+      "success"
+    );
+
+  const showErrorAlert = () =>
+    showAlert(
+      "Error!",
+      "Oops, something went wrong. Please try again.",
+      "error"
+    );
+
+  const showAlert = (title, text, icon) => {
+    Swal.fire({
+      title,
+      text,
+      icon,
+    });
+  };
 
   useEffect(() => {
     RealTimeClock.startClock(setDatetime);
@@ -31,23 +116,40 @@ const Contact = () => {
                 </p>
               </div>
 
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={sendEmail}>
                 <FormInput.GeneralInput
-                  type={"text"}
-                  label={"Fullname"}
-                  placeholder={"Input your name"}
+                  type="text"
+                  name="fullname"
+                  label="Fullname"
+                  placeholder="Input your name"
+                  required
+                  disabled={sending}
                 />
                 <FormInput.GeneralInput
-                  type={"email"}
-                  label={"Email"}
-                  placeholder={"Input your email"}
+                  type="email"
+                  name="email"
+                  label="Email"
+                  placeholder="Input your email"
+                  isInvalid={!!emailError}
+                  errorMessage={emailError}
+                  onChange={handleEmailValidation}
+                  required
+                  disabled={sending}
                 />
                 <FormInput.InputTextArea
-                  label={"Message"}
-                  placeholder={"Type your message"}
+                  name="message"
+                  label="Message"
+                  placeholder="Type your message"
+                  required
+                  disabled={sending}
                 />
-                <Buttons.CTA color="primary" radius="sm">
-                  Send Message
+                <Buttons.CTA
+                  color="primary"
+                  radius="sm"
+                  type="submit"
+                  disabled={sending}
+                >
+                  {sending ? "Sending..." : "Send Message"}
                 </Buttons.CTA>
               </form>
             </div>
