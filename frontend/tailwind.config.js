@@ -13,6 +13,9 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backgroundImage: {
+        "gradient-bg": "url('/images/background-gradient.svg')",
+      },
     },
   },
   darkMode: "class",

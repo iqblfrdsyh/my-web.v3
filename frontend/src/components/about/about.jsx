@@ -8,7 +8,7 @@ import Statistics from "../ui/statistics";
 const About = () => {
   return (
     <section
-      className="sm:flex items-center gap-24 justify-center h-screen sm:h-[500px] relative mb-52 sm:mb-24"
+      className="sm:flex items-center gap-24 justify-center h-screen sm:h-[500px] relative mb-52 sm:mb-24 -mt-20 sm:-mt-0"
       id="about"
     >
       <div className="z-10">
@@ -33,7 +33,7 @@ const About = () => {
           </h2>
           <p className="w-[350px] sm:w-[420px] mt-4">
             I am a 2024 graduate of SMK Yadika Soreang, skilled in website
-            development with experience in HTML, CSS, JavaScript, Bootstrap,
+            development with experience in HTML, CSS, JavaScript, TypeScript,
             Tailwind CSS, ReactJS, and NextJS. I’m also familiar with RESTful
             APIs and single-page applications (SPA). Coding has been my hobby
             since vocational school.

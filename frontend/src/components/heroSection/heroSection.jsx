@@ -35,7 +35,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="relative flex justify-center h-screen" id="heroSection">
+    <section className="relative flex justify-center h-screen mt-10 sm:mt-0" id="heroSection">
       <div className="absolute sm:left-4 top-[340px] sm:top-1/4 flex sm:flex-col items-center gap-4 -mt-2">
         {sosmed.map((sosmed, index) => (
           <Link href={sosmed.href} key={sosmed.alt}>

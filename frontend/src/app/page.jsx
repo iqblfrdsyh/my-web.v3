@@ -58,7 +58,7 @@ export default function Home() {
   }, [hasScrolled]);
 
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden">
       <HeroSection />
       <About />
       <TechStack />

@@ -29,7 +29,7 @@ const NavigationBar = () => {
     },
   ];
   return (
-    <Navbar shouldHideOnScroll className="py-5 bg-transparent">
+    <Navbar shouldHideOnScroll className="py-3 bg-transparent">
       <NavbarContent
         className="flex justify-center items-center mx-auto space-x-4"
         justify="center"

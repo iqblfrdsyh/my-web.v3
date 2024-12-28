@@ -24,9 +24,6 @@ html {
 
 body {
   color: var(--foreground);
-  background-image: url("../../public/images/background-gradient.svg");
-  background-size: cover;
-  background-position: initial;
 }
 
 .animateScrollTo {
@@ -94,9 +91,15 @@ body {
   }
 }
 
-@media (min-width: 640px) {
+@media (min-width: 667px) {
   *,
   html {
     scroll-padding: 80px auto;
+  }
+}
+
+@media (max-width: 667px) {
+  .x {
+    padding-left: 0 !important;
   }
 }
