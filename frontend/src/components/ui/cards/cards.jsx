@@ -9,18 +9,19 @@ import {
 import { Buttons } from "../buttons";
 
 const Cards = {
-  CardCertificate: () => {
+  CardCertificate: ({ title, author, code, image }) => {
     return (
       <Card className="py-4 w-fit mx-auto">
-        <CardHeader className="pb-10 pt-2 px-4 flex-col items-start">
-          <h3 className="font-bold text-large">React Dasar</h3>
-          <small className="text-default-500">Skilvul</small>
+        <CardHeader className="pb-5 pt-2 px-4 flex-col items-start">
+          <h3 className="font-bold text-large line-clamp-2 max-w-[300px]">{title}</h3>
+          <small className="text-default-500">{author}</small>
+          <small className="text-default-500">Code Licence : {code}</small>
         </CardHeader>
         <CardBody className="overflow-visible py-2">
           <Image
-            alt="Card background"
+            alt="Image Certificate"
             className="object-cover rounded-xl"
-            src="/images/6.png"
+            src={image}
             width={300}
           />
         </CardBody>
@@ -28,6 +29,7 @@ const Cards = {
     );
   },
   CardProject: ({
+    image,
     title,
     desc,
     link_sourceCode,
@@ -42,7 +44,7 @@ const Cards = {
           <Image
             alt="Card background"
             className="object-cover rounded-xl"
-            src="/images/portofolio/joy-ai.png"
+            src={image}
             width={340}
           />
         </CardHeader>
@@ -55,7 +57,7 @@ const Cards = {
               {projectType}
             </small>
           </div>
-          <p className="opacity-50 line-clamp-2 text-sm mt-1 max-w-[270px]">
+          <p className="opacity-70 line-clamp-3 text-sm mt-1 max-w-[350px] text-[#171717]">
             {desc}
           </p>
           <div className="flex gap-4 mt-4">
@@ -77,7 +79,7 @@ const Cards = {
             </Link>
           </div>
         </CardBody>
-        <CardFooter className="flex gap-2 flex-wrap">
+        <CardFooter className="flex gap-[6px] flex-wrap">
           {techStack.map((tech, index) => (
             <small
               key={index}

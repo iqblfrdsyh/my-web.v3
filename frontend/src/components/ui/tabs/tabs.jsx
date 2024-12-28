@@ -32,7 +32,7 @@ const TabsProject = ({ currentPage }) => {
             <Cards.CardProject
               key={index}
               title={project.title}
-              desc={project.desc}
+              desc={project.description}
               image={project.image}
               link_sourceCode={project.link_sourceCode}
               link_demo={project.link_demo}
@@ -48,7 +48,7 @@ const TabsProject = ({ currentPage }) => {
             <Cards.CardProject
               key={index}
               title={project.title}
-              desc={project.desc}
+              desc={project.description}
               image={project.image}
               link_sourceCode={project.link_sourceCode}
               link_demo={project.link_demo}
@@ -64,7 +64,7 @@ const TabsProject = ({ currentPage }) => {
             <Cards.CardProject
               key={index}
               title={project.title}
-              desc={project.desc}
+              desc={project.description}
               image={project.image}
               link_sourceCode={project.link_sourceCode}
               link_demo={project.link_demo}

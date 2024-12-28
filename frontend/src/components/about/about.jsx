@@ -4,6 +4,7 @@ import { Image } from "@nextui-org/react";
 import React from "react";
 import { Buttons } from "../ui/buttons";
 import Statistics from "../ui/statistics";
+import Link from "next/link";
 
 const About = () => {
   return (
@@ -40,9 +41,11 @@ const About = () => {
           </p>
         </div>
         <div className="mt-3">
-          <Buttons.CTA className="bg-[#14A7EA] text-white" radius="sm">
-            Download CV
-          </Buttons.CTA>
+          <Link href="/files/M Iqbal Ferdiansyah - CV.pdf" download={true}>
+            <Buttons.CTA className="bg-[#14A7EA] text-white" radius="sm">
+              Download CV
+            </Buttons.CTA>
+          </Link>
         </div>
         <div className="mt-10">
           <Statistics />

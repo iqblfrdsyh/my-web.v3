@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import TitleWithSub from "../ui/title";
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import FormInput from "../ui/input/input";
 import { Buttons } from "../ui/buttons";
 import { RealTimeClock } from "@/libs/datetime";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Contact = () => {
   const [datetime, setDatetime] = useState(RealTimeClock.getCurrentDateTime());
@@ -62,35 +63,35 @@ const Contact = () => {
                 <h3 className="text-xl font-bold mb-4">My Social Media</h3>
                 <div className="flex gap-4">
                   <a
-                    href="#"
+                    href="https://instagram.com/i.frdsyh"
                     className="text-gray-600 hover:text-gray-900 transition-colors"
                   >
                     <FaInstagram size={24} />
                   </a>
                   <a
-                    href="#"
+                    href="https://github.com/iqblfrdsyh"
                     className="text-gray-600 hover:text-gray-900 transition-colors"
                   >
                     <FaGithub size={24} />
                   </a>
                   <a
-                    href="#"
+                    href="https://linkedin.com/in/iqblfrdsyh"
                     className="text-gray-600 hover:text-gray-900 transition-colors"
                   >
                     <FaLinkedin size={24} />
                   </a>
                   <a
-                    href="#"
+                    href="https://x.com/iqblfrdsyh"
                     className="text-gray-600 hover:text-gray-900 transition-colors"
                   >
-                    <FaTwitter size={24} />
+                    <FaXTwitter size={24} />
                   </a>
                 </div>
               </div>
 
               <div className="w-[200px]">
                 <h3 className="text-xl font-bold mb-4">Location</h3>
-                <p className="text-gray-600 my-2">Soreang, Bandung</p>
+                <p className="text-gray-600 my-2">Cibiru, Bandung</p>
                 <p className="text-gray-600 text-sm tracking-[2px]">
                   {datetime}
                 </p>

@@ -11,26 +11,26 @@ const HeroSection = () => {
     {
       icon: "github.svg",
       alt: "github",
-      href: "#",
+      href: "https://github.com/iqblfrdsyh",
       width: 37,
       height: 37,
     },
     {
       icon: "instagram.svg",
       alt: "instagram",
-      href: "#",
+      href: "https://instagram.com/i.frdsyh",
     },
     {
       icon: "linkedin.svg",
       alt: "linkedin",
-      href: "#",
+      href: "https://linkedin.com/in/iqblfrdsyh",
       width: 37,
       height: 37,
     },
     {
       icon: "x.svg",
       alt: "x",
-      href: "#",
+      href: "https://x.com/iqblfrdsyh",
     },
   ];
 

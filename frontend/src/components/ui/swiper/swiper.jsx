@@ -5,6 +5,7 @@ import { Cards } from "../cards";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import { certificates } from "@/data/certificate";
 
 const SwiperPortofolio = () => {
   return (
@@ -33,21 +34,16 @@ const SwiperPortofolio = () => {
       }}
       className="mySwiper"
     >
-      <SwiperSlide>
-        <Cards.CardCertificate />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Cards.CardCertificate />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Cards.CardCertificate />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Cards.CardCertificate />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Cards.CardCertificate />
-      </SwiperSlide>
+      {certificates.map((ctf) => (
+        <SwiperSlide key={ctf.id}>
+          <Cards.CardCertificate
+            title={ctf.title}
+            author={ctf.author}
+            code={ctf.code_licence}
+            image={ctf.image}
+          />
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };

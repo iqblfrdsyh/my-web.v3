@@ -1,0 +1,88 @@
+const certificates = [
+  {
+    id: 1,
+    title: "Belajar Dasar Pemrograman Web",
+    author: "Dicoding x IdCamp",
+    code_licence: "0LZ0Q0GV3Z65",
+    image: "/images/certificate/1.png",
+  },
+  {
+    id: 2,
+    title: "Belajar Dasar Pemrograman JavaScript",
+    author: "Dicoding x IdCamp",
+    code_licence: "53XE423O0ZRN",
+    image: "/images/certificate/2.png",
+  },
+  {
+    id: 3,
+    title: "Belajar Membuat Front-End Web untuk Pemula",
+    author: "Dicoding x IdCamp",
+    code_licence: "81P27YK5QZOY",
+    image: "/images/certificate/3.png",
+  },
+  {
+    id: 4,
+    title: "Belajar Membuat Aplikasi Web dengan React",
+    author: "Dicoding x IdCamp",
+    code_licence: "53XE4V989ZRN",
+    image: "/images/certificate/4.png",
+  },
+  {
+    id: 5,
+    title: "Project Based Internship Program",
+    author: "Nusa Development Program ( NDP )",
+    code_licence: "-",
+    image: "/images/certificate/5.png",
+  },
+  {
+    id: 6,
+    title: "React Dasar",
+    author: "Skilvul",
+    code_licence: "TcvKhGF1Q8SAcge2RCD82Q",
+    image: "/images/certificate/6.png",
+  },
+  {
+    id: 7,
+    title: "TypeScript Course",
+    author: "NusaLMS by Nusantech",
+    code_licence: "tBXBVuQzn1",
+    image: "/images/certificate/7.png",
+  },
+  {
+    id: 8,
+    title: "React JS Course",
+    author: "NusaLMS by Nusantech",
+    code_licence: "Aotp3JZRb7",
+    image: "/images/certificate/9.png",
+  },
+  {
+    id: 9,
+    title: "GIT Course",
+    author: "NusaLMS by Nusantech",
+    code_licence: "8SKLv5aysN",
+    image: "/images/certificate/9.png",
+  },
+  {
+    id: 10,
+    title: "Belajar Back-End Pemula dengan JavaScript",
+    author: "Dicoding x IdCamp",
+    code_licence: "MRZMY834KZYQ",
+    image: "/images/certificate/10.png",
+  },
+  {
+    id: 11,
+    title: "Belajar Dasar AI",
+    author: "Dicoding x IdCamp",
+    code_licence: "2VX34JD13ZYQ",
+    image: "/images/certificate/11.png",
+  },
+  {
+    id: 12,
+    title: "Pelatihan Dasar UI/UX",
+    author: "Dicoding x IdCamp",
+    code_licence: "-",
+    image: "/images/certificate/12.png",
+  },
+];
+
+export { certificates };

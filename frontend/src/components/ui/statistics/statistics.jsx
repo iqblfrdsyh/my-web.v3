@@ -1,3 +1,5 @@
+import { certificates } from "@/data/certificate";
+import { projects } from "@/data/projects";
 import React from "react";
 
 const Statistics = () => {
@@ -8,11 +10,13 @@ const Statistics = () => {
         <p className="font-semibold tracking-[1px]">year experience</p>
       </div>
       <div className="flex flex-col items-center text-center">
-        <h3 className="text-[28px] font-semibold tracking-[1px]">20+</h3>
+        <h3 className="text-[28px] font-semibold tracking-[1px]">
+          {projects.length}
+        </h3>
         <p className="font-semibold tracking-[1px]">projects</p>
       </div>
       <div className="flex flex-col items-center text-center">
-        <h3 className="text-[28px] font-semibold tracking-[1px]">11</h3>
+        <h3 className="text-[28px] font-semibold tracking-[1px]">{certificates.length}</h3>
         <p className="font-semibold tracking-[1px]">certificates</p>
       </div>
     </div>
