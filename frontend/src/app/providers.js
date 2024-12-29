@@ -35,5 +35,5 @@ export function Providers({ children }) {
 }
 
 const Background = () => (
-  <div className="bg-gradient absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat -z-10 opacity-[0.37]"></div>
+  <div className="bg-gradient absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat -z-0 opacity-50"></div>
 );

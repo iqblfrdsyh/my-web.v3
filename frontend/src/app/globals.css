@@ -2,33 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #fefeff;
-    --foreground: #171717;
-  }
-}
-
 *,
 html {
-  /* outline: blue 1px solid; */
+  /* outline: red 1px solid; */
   box-sizing: border-box;
   scroll-behavior: smooth;
   scroll-margin: 30px !important;
 }
 
 body {
-  color: var(--foreground);
+  color: #fff;
+  background-color: #0e171b;
 }
 
 .animateScrollTo {
   animation: animateScrollTo 2s infinite;
   -webkit-animation: animateScrollTo 2s infinite;
+}
+
+.backdrop-saturate-150 {
+  --tw-backdrop-saturate: none;
 }
 
 .swiper {
@@ -50,11 +43,19 @@ body {
 }
 
 .swiper-pagination {
-  width: 150px !important;
+  margin: 0 auto;
+  width: 75px !important;
+  overflow: hidden;
 }
 
 .swiper-pagination-bullet-active-main {
   padding: 9px;
+}
+.swiper-pagination-bullet-active-prev-prev {
+  display: none !important;
+}
+.swiper-pagination-bullet-active-next-next {
+  display: none !important;
 }
 
 .swiper-pagination-bullet-active-prev,

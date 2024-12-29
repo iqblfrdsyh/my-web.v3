@@ -8,7 +8,8 @@ const FormInput = {
         type={type}
         label={label}
         placeholder={placeholder}
-        className="w-full outline-black"
+        className="w-full outline-white text-white "
+        color="primary"
         variant="underlined"
         {...rest}
       />
@@ -19,6 +20,7 @@ const FormInput = {
       <Textarea
         label={label}
         placeholder={placeholder}
+        color="primary"
         className="w-full"
         minRows={3}
         variant="underlined"

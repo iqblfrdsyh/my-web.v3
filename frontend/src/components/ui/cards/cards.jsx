@@ -13,7 +13,7 @@ const Cards = {
     return (
       <Card className="py-4 w-fit mx-auto">
         <CardHeader className="pb-5 pt-2 px-4 flex-col items-start">
-          <h3 className="font-bold text-large line-clamp-2 max-w-[300px]">{title}</h3>
+          <h3 className="font-bold text-large line-clamp-2 max-w-[300px] text-black">{title}</h3>
           <small className="text-default-500">{author}</small>
           <small className="text-default-500">Code Licence : {code}</small>
         </CardHeader>

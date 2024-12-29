@@ -42,7 +42,7 @@ const About = () => {
         </div>
         <div className="mt-3">
           <Link href="/files/M Iqbal Ferdiansyah - CV.pdf" download={true}>
-            <Buttons.CTA className="bg-[#14A7EA] text-white" radius="sm">
+            <Buttons.CTA className="bg-[#3c9fcc] text-white" radius="sm">
               Download CV
             </Buttons.CTA>
           </Link>

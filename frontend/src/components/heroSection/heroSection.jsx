@@ -5,56 +5,61 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Buttons } from "../ui/buttons";
 import { PiChatsTeardropFill } from "react-icons/pi";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const HeroSection = () => {
   const sosmed = [
     {
-      icon: "github.svg",
+      icon: FaGithub,
       alt: "github",
       href: "https://github.com/iqblfrdsyh",
-      width: 37,
-      height: 37,
     },
     {
-      icon: "instagram.svg",
+      icon: FaInstagram,
       alt: "instagram",
       href: "https://instagram.com/i.frdsyh",
     },
     {
-      icon: "linkedin.svg",
+      icon: FaLinkedin,
       alt: "linkedin",
       href: "https://linkedin.com/in/iqblfrdsyh",
-      width: 37,
-      height: 37,
     },
     {
-      icon: "x.svg",
+      icon: FaXTwitter,
       alt: "x",
       href: "https://x.com/iqblfrdsyh",
     },
   ];
 
   return (
-    <section className="relative flex justify-center h-screen mt-10 sm:mt-0" id="heroSection">
+    <section
+      className="relative flex justify-center h-screen mt-10 sm:mt-0"
+      id="heroSection"
+    >
       <div className="absolute sm:left-4 top-[340px] sm:top-1/4 flex sm:flex-col items-center gap-4 -mt-2">
-        {sosmed.map((sosmed, index) => (
-          <Link href={sosmed.href} key={sosmed.alt}>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              whileHover={{ scale: 1.1 }}
+        {sosmed.map((sosmed, index) => {
+          const IconComponent = sosmed.icon;
+
+          return (
+            <Link
+              href={sosmed.href}
+              key={sosmed.alt}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Image
-                src={`/images/icons/${sosmed.icon}`}
-                alt={sosmed.alt}
-                width={sosmed.width || 30}
-                height={sosmed.height || 30}
-                radius="none"
-              />
-            </motion.div>
-          </Link>
-        ))}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                whileHover={{ scale: 1.1 }}
+                className="text-[#56c9ff]" 
+              >
+                <IconComponent size={30} />
+              </motion.div>
+            </Link>
+          );
+        })}
       </div>
 
       <div className="absolute top-24 sm:top-1/4 -mt-9">
@@ -63,7 +68,7 @@ const HeroSection = () => {
             <p className="font-semibold text-[19px]">Hello, I&apos;m</p>
             <h1 className="text-[35px] sm:text-[40px] font-semibold tracking-[3px]">
               Web{" "}
-              <span className="text-[#14A7EA] underline underline-offset-[20px]">
+              <span className="text-[#56c9ff] underline underline-offset-[20px]">
                 Developer
               </span>
             </h1>
@@ -78,14 +83,14 @@ const HeroSection = () => {
             <Buttons.CTA
               size="md"
               variant="bordered"
-              className="border-black border-2 rounded-[8px] px-5 hover:bg-slate-300"
+              className="border- border-2 rounded-[8px] px-5 hover:bg-slate-800"
             >
               Hire Me
             </Buttons.CTA>
             <Buttons.CTA
               size="md"
               variant="bordered"
-              className="border-black border-2 rounded-[8px] px-5 flex items-center gap-2 hover:bg-slate-300"
+              className="border- border-2 rounded-[8px] px-5 flex items-center gap-2 hover:bg-slate-800"
             >
               <PiChatsTeardropFill className="text-[20px]" />
               Let&apos;s Chat

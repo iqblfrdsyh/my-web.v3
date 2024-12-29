@@ -110,7 +110,7 @@ const Contact = () => {
                   Do you want to connect with me?
                 </h2>
                 <h3 className="text-xl mb-4">Feel free to contact me</h3>
-                <p className="text-gray-600 mb-6">
+                <p className="text-white opacity-85 mb-6">
                   I&apos;m looking for freelance opportunities or internships in
                   startups, agencies, or companies.
                 </p>
@@ -144,7 +144,7 @@ const Contact = () => {
                   disabled={sending}
                 />
                 <Buttons.CTA
-                  color="primary"
+                  className={"bg-[#3c9fcc] text-white"}
                   radius="sm"
                   type="submit"
                   disabled={sending}
@@ -157,8 +157,8 @@ const Contact = () => {
             <div className="space-y-8 sm:-translate-x-20">
               <div>
                 <h3 className="text-xl font-bold mb-4">Contact Details</h3>
-                <p className="text-gray-600">iqblfrdsyh@gmail.com</p>
-                <p className="text-gray-600">+62 838-3239-7149</p>
+                <p className="text-white opacity-85">iqblfrdsyh@gmail.com</p>
+                <p className="text-white opacity-85">+62 838-3239-7149</p>
               </div>
 
               <div>
@@ -166,25 +166,25 @@ const Contact = () => {
                 <div className="flex gap-4">
                   <a
                     href="https://instagram.com/i.frdsyh"
-                    className="text-gray-600 hover:text-gray-900 transition-colors"
+                    className="text-white opacity-85 hover:text-gray-900 transition-colors"
                   >
                     <FaInstagram size={24} />
                   </a>
                   <a
                     href="https://github.com/iqblfrdsyh"
-                    className="text-gray-600 hover:text-gray-900 transition-colors"
+                    className="text-white opacity-85 hover:text-gray-900 transition-colors"
                   >
                     <FaGithub size={24} />
                   </a>
                   <a
                     href="https://linkedin.com/in/iqblfrdsyh"
-                    className="text-gray-600 hover:text-gray-900 transition-colors"
+                    className="text-white opacity-85 hover:text-gray-900 transition-colors"
                   >
                     <FaLinkedin size={24} />
                   </a>
                   <a
                     href="https://x.com/iqblfrdsyh"
-                    className="text-gray-600 hover:text-gray-900 transition-colors"
+                    className="text-white opacity-85 hover:text-gray-900 transition-colors"
                   >
                     <FaXTwitter size={24} />
                   </a>
@@ -193,8 +193,8 @@ const Contact = () => {
 
               <div className="w-[200px]">
                 <h3 className="text-xl font-bold mb-4">Location</h3>
-                <p className="text-gray-600 my-2">Cibiru, Bandung</p>
-                <p className="text-gray-600 text-sm tracking-[2px]">
+                <p className="text-white opacity-85 my-2">Cibiru, Bandung</p>
+                <p className="text-white opacity-85 text-sm tracking-[2px]">
                   {datetime}
                 </p>
               </div>

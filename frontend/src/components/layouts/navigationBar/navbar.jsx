@@ -29,7 +29,7 @@ const NavigationBar = () => {
     },
   ];
   return (
-    <Navbar shouldHideOnScroll className="py-3 bg-transparent">
+    <Navbar position="static" className="py-3 bg-trasnparent">
       <NavbarContent
         className="flex justify-center items-center mx-auto space-x-4"
         justify="center"

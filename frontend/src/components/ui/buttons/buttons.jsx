@@ -27,8 +27,12 @@ const Buttons = {
         className="fixed right-0 sm:right-16  hover:cursor-pointer hover:opacity-70 transition-all duration-500 ease-in-out z-50"
         style={{ bottom: screenHeight * 0.1, rotate: rotateValue }}
       >
-        <div className="bg-[#14A7EA] flex gap-1 px-3 py-2 animateScrollTo rounded-full">
-          <Image src="/images/icons/ellipse.svg" alt="eliipse" className="rotate-90" />
+        <div className="bg-[#22aded] flex gap-1 px-3 py-2 animateScrollTo rounded-full">
+          <Image
+            src="/images/icons/ellipse.svg"
+            alt="eliipse"
+            className="rotate-90"
+          />
           <FaArrowDown className="-rotate-90 text-white font-bold text-[18px]" />
         </div>
       </Link>

@@ -9,7 +9,7 @@ const Footer = () => {
         <Link
           href="https://instagram.com/i.frdsyh"
           underline="always"
-          className="text-[13px] sm:text-[15px]"
+          className="text-[13px] sm:text-[15px] text-[#56c9ff]"
         >
           M Iqbal Ferdiansyah
         </Link>
