@@ -4,8 +4,12 @@ import { Image, Link } from "@nextui-org/react";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Buttons } from "../ui/buttons";
-import { PiChatsTeardropFill } from "react-icons/pi";
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import {
+  FaGithub,
+  FaInstagram,
+  FaLaptopCode,
+  FaLinkedin,
+} from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 const HeroSection = () => {
@@ -53,7 +57,7 @@ const HeroSection = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 whileHover={{ scale: 1.1 }}
-                className="text-[#56c9ff]" 
+                className="text-[#56c9ff]"
               >
                 <IconComponent size={30} />
               </motion.div>
@@ -79,21 +83,23 @@ const HeroSection = () => {
               Front End, my achievement is to become Full Stack Developer.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-5">
+          <div className="flex gap-5">
             <Buttons.CTA
               size="md"
               variant="bordered"
-              className="border- border-2 rounded-[8px] px-5 hover:bg-slate-800"
+              href="#project"
+              className="border- border-2 rounded-[8px] px-5 flex items-center gap-2 hover:bg-slate-800"
             >
-              Hire Me
+              <FaLaptopCode className="text-[20px]" />
+              Explore My Portfolio
             </Buttons.CTA>
             <Buttons.CTA
               size="md"
               variant="bordered"
-              className="border- border-2 rounded-[8px] px-5 flex items-center gap-2 hover:bg-slate-800"
+              href="#contact"
+              className="border- border-2 rounded-[8px] px-5 hover:bg-slate-800"
             >
-              <PiChatsTeardropFill className="text-[20px]" />
-              Let&apos;s Chat
+              Hire Me
             </Buttons.CTA>
           </div>
         </div>

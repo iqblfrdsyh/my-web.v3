@@ -13,7 +13,9 @@ const Cards = {
     return (
       <Card className="py-4 w-fit mx-auto">
         <CardHeader className="pb-5 pt-2 px-4 flex-col items-start">
-          <h3 className="font-bold text-large line-clamp-2 max-w-[300px] text-black">{title}</h3>
+          <h3 className="font-bold text-large line-clamp-2 max-w-[300px] text-black">
+            {title}
+          </h3>
           <small className="text-default-500">{author}</small>
           <small className="text-default-500">Code Licence : {code}</small>
         </CardHeader>
@@ -61,22 +63,20 @@ const Cards = {
             {desc}
           </p>
           <div className="flex gap-4 mt-4">
-            <Link href={link_demo}>
-              <Buttons.CTA
-                size="sm"
-                className="bg-[#4F4F4F] text-[16px] py-5 text-white px-8"
-              >
-                Demo
-              </Buttons.CTA>
-            </Link>
-            <Link href={link_sourceCode}>
-              <Buttons.CTA
-                size="sm"
-                className="bg-[#4F4F4F] text-[16px] py-5 text-white px-3"
-              >
-                Source Code
-              </Buttons.CTA>
-            </Link>
+            <Buttons.CTA
+              size="sm"
+              className="bg-[#4F4F4F] text-[16px] py-5 text-white px-8"
+              href={link_demo}
+            >
+              Demo
+            </Buttons.CTA>
+            <Buttons.CTA
+              size="sm"
+              className="bg-[#4F4F4F] text-[16px] py-5 text-white px-3"
+              href={link_sourceCode}
+            >
+              Source Code
+            </Buttons.CTA>
           </div>
         </CardBody>
         <CardFooter className="flex gap-[6px] flex-wrap">

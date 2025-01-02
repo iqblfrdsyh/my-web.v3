@@ -3,8 +3,12 @@ import { useEffect, useState } from "react";
 import { FaArrowDown } from "react-icons/fa6";
 
 const Buttons = {
-  CTA: ({ children, ...props }) => {
-    return <Button {...props}>{children}</Button>;
+  CTA: ({ children, isDownload, ...props }) => {
+    return (
+      <Link href={props.href} download={isDownload || false}>
+        <Button {...props}>{children}</Button>
+      </Link>
+    );
   },
   ButtonScroll: ({ scrollTo, rotateValue }) => {
     const [screenHeight, setScreenHeight] = useState(0);

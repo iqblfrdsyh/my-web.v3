@@ -5,10 +5,10 @@ import TitleWithSub from "../ui/title";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import FormInput from "../ui/input/input";
-import { Buttons } from "../ui/buttons";
 import { RealTimeClock } from "@/libs/datetime";
 import Swal from "sweetalert2";
 import emailjs from "emailjs-com";
+import { Button } from "@nextui-org/react";
 
 const Contact = () => {
   const [datetime, setDatetime] = useState(RealTimeClock.getCurrentDateTime());
@@ -143,14 +143,14 @@ const Contact = () => {
                   required
                   disabled={sending}
                 />
-                <Buttons.CTA
+                <Button
                   className={"bg-[#3c9fcc] text-white"}
                   radius="sm"
                   type="submit"
                   disabled={sending}
                 >
                   {sending ? "Sending..." : "Send Message"}
-                </Buttons.CTA>
+                </Button>
               </form>
             </div>
 

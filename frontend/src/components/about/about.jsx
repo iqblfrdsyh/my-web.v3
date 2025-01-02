@@ -41,11 +41,14 @@ const About = () => {
           </p>
         </div>
         <div className="mt-3">
-          <Link href="/files/M Iqbal Ferdiansyah - CV.pdf" download={true}>
-            <Buttons.CTA className="bg-[#3c9fcc] text-white" radius="sm">
-              Download CV
-            </Buttons.CTA>
-          </Link>
+          <Buttons.CTA
+            className="bg-[#3c9fcc] text-white"
+            radius="sm"
+            href="/files/M Iqbal Ferdiansyah - CV.pdf"
+            isDownload={true}
+          >
+            Download CV
+          </Buttons.CTA>
         </div>
         <div className="mt-10">
           <Statistics />
