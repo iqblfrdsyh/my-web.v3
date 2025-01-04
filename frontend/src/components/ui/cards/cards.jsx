@@ -40,14 +40,13 @@ const Cards = {
     projectType,
   }) => {
     return (
-      <Card className="py-4 h-fit sm:w-[350px] w-[325px] mx-auto">
+      <Card className="py-4 h-fit sm:w-[370px] w-[325px] mx-auto">
         <CardHeader className="pb-0 pt-1 px-4 flex-col items-start">
-          {/* <h4 className="text-[18px] font-semibold mb-3">Project #1</h4> */}
           <Image
             alt="Card background"
             className="object-cover rounded-xl"
             src={image}
-            width={340}
+            width={450}
           />
         </CardHeader>
         <CardBody className="overflow-visible py-2">
