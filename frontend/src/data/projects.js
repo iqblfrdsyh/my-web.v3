@@ -28,6 +28,22 @@ const projects = [
     techStack: ["HTML", "CSS", "JavaScript", "Netlify", "Local Storage"],
   },
   {
+    title: "NeoNest",
+    description:
+      "NeoNest is a service platform that is fast, efficient, secure, and hassle-free, designed to meet your needs easily and reliably.",
+    image: "/images/portofolio/neonest-id.png",
+    projectType: "Website",
+    link_sourceCode: "https://github.com/iqblfrdsyh/NeoNest",
+    link_demo: "https://neonest-id.vercel.app",
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Vercel",
+    ],
+  },
+  {
     title: "VGame",
     description:
       "VGame is a platform to explore games across various platforms, view system requirements, and create a personalized wishlist.",
